@@ -1,0 +1,22 @@
+syntax = "proto3";
+package messenger;
+option go_package = "messengerpb";
+
+message Messenger{
+    string userName = 1;
+    string message = 2;
+    string date = 3;
+
+}
+message CreateMessageRequest{
+    Messenger message = 1;
+}
+message CreateMessageResponse{
+    Messenger message = 1;
+}
+
+
+
+service MessageService{
+    rpc CreateMessage (CreateMessageRequest) returns (CreateMessageResponse){};
+}
