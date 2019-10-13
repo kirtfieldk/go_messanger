@@ -77,7 +77,7 @@ func (*server) CreateMessage(ctx context.Context, req *messengerpb.CreateMessage
 	data := item{
 		Username: message.GetUserName(),
 		Message:  message.GetMessage(),
-		Date:     strconv.Itoa(time.Year()),
+		Date:     strconv.Itoa(time.,
 	}
 	return nil, nil
 }
